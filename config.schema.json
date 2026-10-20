@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://jitword.example/schemas/3d-car-config/1.0.0",
+  "title": "3D 汽车配置器页面配置（3d-car-config skill · © JitWord 协同AI团队）",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "description": "页面元信息",
+      "additionalProperties": false,
+      "properties": {
+        "pageKey": { "type": "string", "description": "页面唯一标识，用于判断是否需要改写 document.title" },
+        "title": { "type": "string", "description": "浏览器标签页标题，留空则按 branding 自动拼装" },
+        "copyright": { "type": "string", "description": "版权行，默认「© JitWord 协同AI团队」" },
+        "lang": { "type": "string", "description": "html lang 属性，如 zh-CN / en" },
+        "brand": { "type": "string" },
+        "hudTitleHtml": { "type": "string", "description": "预留字段，当前版本未使用" },
+        "hudSubtitle": { "type": "string", "description": "预留字段，等价 branding.hudSubtitle" }
+      }
+    },
+    "branding": {
+      "type": "object",
+      "description": "HUD 品牌文案（页面左下角标题）",
+      "additionalProperties": false,
+      "properties": {
+        "titleMain": { "type": "string", "description": "标题主词，如 Jit / Volt" },
+        "titleAccent": { "type": "string", "description": "高亮词（绿色 span），如 400 / RS" },
+        "titleSuffix": { "type": "string", "description": "后缀词，如 即时战舰" },
+        "hudSubtitle": { "type": "string", "description": "副标题一行小字，如 OFF-ROAD · HYBRID" }
+      }
+    },
+    "palette": {
+      "type": "object",
+      "description": "控制台色板；缺省数组时沿用模板内置色板",
+      "additionalProperties": false,
+      "properties": {
+        "mainColors": { "type": "array", "description": "主体车漆色", "items": { "type": "object", "required": ["c"], "properties": { "name": { "type": "string" }, "c": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" } } } },
+        "accentColors": { "type": "array", "description": "副色（座舱/机甲）", "items": { "type": "object", "required": ["c"], "properties": { "name": { "type": "string" }, "c": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" } } } },
+        "wheelColors": { "type": "array", "description": "轮毂双色（rim 辐条 / bright 亮面），css 为色块预览", "items": { "type": "object", "required": ["rim", "bright"], "properties": { "rim": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }, "bright": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }, "css": { "type": "string" } } } },
+        "caliperColors": { "type": "array", "description": "卡钳色，支持 #hex 字符串或 {c} 对象", "items": { "anyOf": [{ "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }, { "type": "object", "required": ["c"], "properties": { "c": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" } } }] } }
+      }
+    },
+    "initial": {
+      "type": "object",
+      "description": "页面打开时的初始状态（等价于用户操作控制台后的效果）",
+      "additionalProperties": false,
+      "properties": {
+        "paint": { "$ref": "#/definitions/hex" },
+        "accent": { "$ref": "#/definitions/hex" },
+        "wheelRim": { "$ref": "#/definitions/hex" },
+        "wheelBright": { "$ref": "#/definitions/hex" },
+        "caliper": { "$ref": "#/definitions/hex" },
+        "tint": { "type": "string", "enum": ["clear", "light", "dark", "privacy"], "description": "车窗贴膜" },
+        "engineOn": { "type": "boolean", "description": "引擎是否点火" },
+        "speed": { "type": "number", "minimum": 0, "maximum": 100, "description": "初始车速（控制台滑块值）" },
+        "autoRotate": { "type": "boolean", "description": "相机自动环绕" },
+        "lightsOn": { "type": "boolean", "description": "前大灯" },
+        "blueOn": { "type": "boolean", "description": "蓝灯呼吸（警灯效果）" },
+        "ambientOn": { "type": "boolean", "description": "氛围灯" },
+        "finish": { "type": "string", "enum": ["matte", "standard", "pearl"], "description": "车漆质感" },
+        "decal": { "type": "string", "enum": ["none", "mecha", "racing", "digital"], "description": "初始车身贴图（custom 需用户上传，不能预设）" },
+        "decalPos": { "type": "string", "enum": ["hood", "sideL", "sideR", "roof", "trunk", "front", "all"], "description": "贴图位置" },
+        "suspension": { "type": "string", "enum": ["low", "std", "off"], "description": "悬架高度：低趴/标准/越野" }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "description": "场景氛围参数",
+      "additionalProperties": false,
+      "properties": {
+        "background": {
+          "type": "object",
+          "description": "三段渐变天幕颜色",
+          "additionalProperties": false,
+          "properties": {
+            "top": { "$ref": "#/definitions/hex" },
+            "mid": { "$ref": "#/definitions/hex" },
+            "bottom": { "$ref": "#/definitions/hex" }
+          }
+        },
+        "fogColor": { "$ref": "#/definitions/hex" },
+        "fogDensity": { "type": "number", "minimum": 0, "maximum": 0.1 },
+        "exposure": { "type": "number", "minimum": 0.2, "maximum": 3, "description": "toneMapping 曝光" },
+        "autoRotateSpeed": { "type": "number", "minimum": -5, "maximum": 5 }
+      }
+    }
+  },
+  "definitions": {
+    "hex": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }
+  }
+}

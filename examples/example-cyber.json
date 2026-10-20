@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "pageKey": "neon01",
+    "title": "Neon 01 赛博原型 · 3D",
+    "copyright": "© JitWord 协同AI团队",
+    "lang": "zh-CN"
+  },
+  "branding": {
+    "titleMain": "Neon",
+    "titleAccent": "01",
+    "titleSuffix": "赛博原型",
+    "hudSubtitle": "PROTOTYPE · LINK READY"
+  },
+  "initial": {
+    "paint": "#16181c",
+    "accent": "#1a1c1e",
+    "wheelRim": "#23272a",
+    "wheelBright": "#9aa3a8",
+    "caliper": "#cc2222",
+    "tint": "dark",
+    "engineOn": true,
+    "speed": 45,
+    "autoRotate": true,
+    "lightsOn": true,
+    "blueOn": true,
+    "ambientOn": true,
+    "finish": "matte",
+    "decal": "digital",
+    "decalPos": "sideR",
+    "suspension": "std"
+  },
+  "scene": {
+    "background": {
+      "top": "#2a1a4a",
+      "mid": "#0c0a1e",
+      "bottom": "#040308"
+    },
+    "fogColor": "#0a0818"
+  },
+  "palette": {
+    "mainColors": [
+      {
+        "name": "量子银",
+        "c": "#c9ced4"
+      },
+      {
+        "name": "哑光黑",
+        "c": "#16181c"
+      },
+      {
+        "name": "电光紫",
+        "c": "#4d2a68"
+      },
+      {
+        "name": "钛空灰",
+        "c": "#3a3f44"
+      }
+    ]
+  }
+}

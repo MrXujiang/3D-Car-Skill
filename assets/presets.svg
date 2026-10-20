@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" font-family="'PingFang SC','Microsoft YaHei',Segoe UI,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1420"/><stop offset="1" stop-color="#070a10"/>
+    </linearGradient>
+    <linearGradient id="gR" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8323c"/><stop offset="1" stop-color="#7a1519"/></linearGradient>
+    <linearGradient id="gO" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#566249"/><stop offset="1" stop-color="#2c3626"/></linearGradient>
+    <linearGradient id="gC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#242830"/><stop offset="1" stop-color="#101318"/></linearGradient>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+
+  <!-- reusable mini car drawn 3 times with different palettes -->
+  <!-- CELL 1 : Racing -->
+  <g transform="translate(40,40)">
+    <rect x="0" y="0" width="350" height="240" rx="18" fill="#ffffff" fill-opacity="0.035" stroke="#c8323c" stroke-opacity="0.4"/>
+    <ellipse cx="175" cy="170" rx="120" ry="16" fill="#000" opacity="0.35"/>
+    <path d="M55 150 Q55 122 88 116 L120 92 Q150 78 220 80 L250 84 Q286 92 300 122 L312 130 Q322 136 322 150 L318 156 L60 156 Q57 156 55 150 Z" fill="url(#gR)" stroke="#e6c9cb" stroke-width="1"/>
+    <path d="M128 100 Q155 84 214 86 L236 92 Q250 98 262 116 L150 118 Z" fill="#0e161e" opacity="0.7"/>
+    <path d="M120 92 Q150 78 220 80 L250 84" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+    <rect x="120" y="112" width="180" height="6" fill="#f2f2f5" opacity="0.85"/>
+    <circle cx="110" cy="152" r="26" fill="#0e0e0e" stroke="#dfe4e8" stroke-width="4"/>
+    <circle cx="270" cy="152" r="26" fill="#0e0e0e" stroke="#dfe4e8" stroke-width="4"/>
+    <text x="24" y="212" fill="#e8757d" font-size="20" font-weight="800" letter-spacing="2">RACING</text>
+    <text x="24" y="232" fill="#8b9aa3" font-size="12" letter-spacing="1">竞速红 · 拉花贴花 · 低趴</text>
+  </g>
+
+  <!-- CELL 2 : Offroad -->
+  <g transform="translate(425,40)">
+    <rect x="0" y="0" width="350" height="240" rx="18" fill="#ffffff" fill-opacity="0.035" stroke="#b39a63" stroke-opacity="0.4"/>
+    <ellipse cx="175" cy="170" rx="120" ry="16" fill="#000" opacity="0.35"/>
+    <path d="M55 150 Q55 118 88 112 L118 84 Q150 66 224 68 L256 74 Q292 84 306 118 L316 128 Q324 134 324 150 L318 156 L60 156 Q57 156 55 150 Z" fill="url(#gO)" stroke="#c9c2a6" stroke-width="1"/>
+    <path d="M126 92 Q156 74 218 76 L244 84 Q258 92 268 112 L150 114 Z" fill="#0e161e" opacity="0.7"/>
+    <path d="M118 84 Q150 66 224 68 L256 74" fill="none" stroke="#dfe4e8" stroke-width="2" opacity="0.5"/>
+    <rect x="120" y="66" width="120" height="8" rx="3" fill="#3a3f44"/>
+    <circle cx="110" cy="152" r="30" fill="#0e0e0e" stroke="#b39a63" stroke-width="5"/>
+    <circle cx="272" cy="152" r="30" fill="#0e0e0e" stroke="#b39a63" stroke-width="5"/>
+    <text x="24" y="212" fill="#cbb177" font-size="20" font-weight="800" letter-spacing="2">OFFROAD</text>
+    <text x="24" y="232" fill="#8b9aa3" font-size="12" letter-spacing="1">丛林绿 · 越野悬架 · 行李架</text>
+  </g>
+
+  <!-- CELL 3 : Cyber -->
+  <g transform="translate(810,40)">
+    <rect x="0" y="0" width="350" height="240" rx="18" fill="#ffffff" fill-opacity="0.035" stroke="#35c8ff" stroke-opacity="0.45"/>
+    <ellipse cx="175" cy="170" rx="120" ry="16" fill="#000" opacity="0.35"/>
+    <path d="M55 150 Q55 122 88 116 L120 92 Q150 78 220 80 L250 84 Q286 92 300 122 L312 130 Q322 136 322 150 L318 156 L60 156 Q57 156 55 150 Z" fill="url(#gC)" stroke="#4d2a68" stroke-width="1"/>
+    <path d="M128 100 Q155 84 214 86 L236 92 Q250 98 262 116 L150 118 Z" fill="#0e161e" opacity="0.7"/>
+    <path d="M120 92 Q150 78 220 80 L250 84" fill="none" stroke="#35c8ff" stroke-width="2.2" opacity="0.85"/>
+    <path d="M60 148 L318 148" stroke="#35c8ff" stroke-width="2" opacity="0.5"/>
+    <circle cx="110" cy="152" r="26" fill="#0e0e0e" stroke="#4d2a68" stroke-width="4"/>
+    <circle cx="270" cy="152" r="26" fill="#0e0e0e" stroke="#4d2a68" stroke-width="4"/>
+    <text x="24" y="212" fill="#66d6ff" font-size="20" font-weight="800" letter-spacing="2">CYBER</text>
+    <text x="24" y="232" fill="#8b9aa3" font-size="12" letter-spacing="1">量子黑 · 数码贴花 · 氛围灯</text>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "pageKey": "voltrs",
+    "title": "Volt RS 竞速版 · 3D",
+    "copyright": "© JitWord 协同AI团队",
+    "lang": "zh-CN"
+  },
+  "branding": {
+    "titleMain": "Volt",
+    "titleAccent": "RS",
+    "titleSuffix": "竞速版",
+    "hudSubtitle": "TRACK EDITION · ZERO DRAG"
+  },
+  "initial": {
+    "paint": "#c81e2c",
+    "accent": "#1a1c1e",
+    "wheelRim": "#23272a",
+    "wheelBright": "#9aa3a8",
+    "caliper": "#e0b020",
+    "tint": "privacy",
+    "engineOn": true,
+    "speed": 72,
+    "autoRotate": true,
+    "lightsOn": true,
+    "blueOn": true,
+    "ambientOn": true,
+    "finish": "pearl",
+    "decal": "racing",
+    "decalPos": "all",
+    "suspension": "low"
+  },
+  "scene": {
+    "background": {
+      "top": "#223344",
+      "mid": "#0c1218",
+      "bottom": "#040506"
+    },
+    "fogColor": "#070a0c"
+  },
+  "palette": {
+    "mainColors": [
+      {
+        "name": "竞速白",
+        "c": "#eef0f2"
+      },
+      {
+        "name": "烈焰红",
+        "c": "#c81e2c"
+      },
+      {
+        "name": "电镀黄",
+        "c": "#d8a614"
+      },
+      {
+        "name": "夜煞黑",
+        "c": "#141618"
+      }
+    ],
+    "caliperColors": [
+      "#e0b020",
+      "#cc2222",
+      "#2050c0"
+    ]
+  }
+}

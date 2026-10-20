@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "pageKey": "aurora",
+    "title": "Aurora 月光座驾 · 3D",
+    "copyright": "© JitWord 协同AI团队",
+    "lang": "zh-CN"
+  },
+  "branding": {
+    "titleMain": "Aurora",
+    "titleAccent": "Lunar",
+    "titleSuffix": "月光座驾",
+    "hudSubtitle": "MIDNIGHT EDITION · MOONLIT"
+  },
+  "palette": {
+    "mainColors": [
+      { "name": "冰湖蓝", "c": "#8ec5e8" },
+      { "name": "月光白", "c": "#eef4f8" }
+    ],
+    "accentColors": [],
+    "wheelColors": [],
+    "caliperColors": ["#3f86b3", "#c9d6de"]
+  },
+  "initial": {
+    "paint": "#8ec5e8",
+    "accent": "#1a1c1e",
+    "finish": "pearl",
+    "tint": "light",
+    "decal": "none",
+    "suspension": "std",
+    "engineOn": true,
+    "speed": 30,
+    "autoRotate": true,
+    "lightsOn": true,
+    "blueOn": false,
+    "ambientOn": true
+  },
+  "scene": {
+    "background": { "top": "#16233d", "mid": "#0a1120", "bottom": "#04070c" },
+    "fogColor": "#070b14",
+    "exposure": 1.0,
+    "autoRotateSpeed": 0.7
+  }
+}
